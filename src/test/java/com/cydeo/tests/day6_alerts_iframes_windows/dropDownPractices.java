@@ -30,6 +30,7 @@ public class dropDownPractices {
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
         Thread.sleep(1000);
+
         stateDropdown.selectByVisibleText("Illinois");
 
         Thread.sleep(1000);
