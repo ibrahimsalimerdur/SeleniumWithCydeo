@@ -53,7 +53,8 @@ public class T1_WindowHandling {
 
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
-
+//select/option[@value='4'])[1]
+//option[@value='4'])[1]/preceding-sibling::option[1]
 
         
 
