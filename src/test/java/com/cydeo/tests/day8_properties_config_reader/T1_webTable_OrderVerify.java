@@ -50,8 +50,12 @@ public class T1_webTable_OrderVerify {
 
     @Test
     public void test2(){
-        String customerOrderDate = WebTableUtils.returnOrderDate(driver, "Alexandra Gray");
+        String customerOrderDate1 = WebTableUtils.returnOrderDate(driver, "Alexandra Gray");
+        System.out.println(customerOrderDate1);
 
-     }
+        String customerOrderDate2 = WebTableUtils.returnOrderDate(driver, "John Doe");
+        System.out.println(customerOrderDate2);
+
+    }
 
 }
