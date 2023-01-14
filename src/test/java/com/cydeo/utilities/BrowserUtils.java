@@ -36,4 +36,7 @@ public class BrowserUtils {
         Assert.assertEquals(driver.getTitle(),expectedTitle, "Title is not matching, Fail");
     }
 
+
+
+
 }
