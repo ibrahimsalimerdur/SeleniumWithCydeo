@@ -1,5 +1,8 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
+
+import com.cydeo.tests.base.TestBase;
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -10,7 +13,8 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T3_CRM_Login {
+public class T3_CRM_Login extends TestBase {
+
 
 //1. Create new test and make set ups
 //2. Go to : http://login1.nextbasecrm.com/
@@ -20,18 +24,7 @@ public class T3_CRM_Login {
 //6. Verify title is as expected:
 //Expected: Portal
 
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setupMethod() {
-        driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-
     @Test
-
     public void crm_login_test()   {
         driver.get("https://login1.nextbasecrm.com/");
         WebElement loginPrompt = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[1]/div[1]/input"));
