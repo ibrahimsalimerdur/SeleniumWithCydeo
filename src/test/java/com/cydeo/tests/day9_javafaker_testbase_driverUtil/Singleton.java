@@ -8,7 +8,7 @@ public class Singleton {
     private static String word;
 
     public static String getWord(){
-        if (word == null){
+        if (word == null == false){
             System.out.println("First time call. Word is null");
         } else {
             System.out.println("Word already has value");
