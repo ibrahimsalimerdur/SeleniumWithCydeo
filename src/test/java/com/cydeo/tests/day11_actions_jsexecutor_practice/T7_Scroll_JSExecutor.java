@@ -27,6 +27,7 @@ public class T7_Scroll_JSExecutor {
         js.executeScript("arguments[1].scrollIntoView(true)",cydeoLink,homeLink);
 //4- Scroll up to “Home” link
 //5- Use below provided JS method only
+
     }
 
 }
