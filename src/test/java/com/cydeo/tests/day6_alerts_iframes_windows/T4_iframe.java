@@ -24,6 +24,7 @@ public class T4_iframe {
 
         driver.switchTo().frame("mce_0_ifr");
 
+
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
 
         Assert.assertTrue(yourContentGoesHereText.isDisplayed());

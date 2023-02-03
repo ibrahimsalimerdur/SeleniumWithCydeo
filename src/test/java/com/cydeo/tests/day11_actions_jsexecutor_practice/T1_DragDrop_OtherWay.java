@@ -7,19 +7,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class T1_Circle_Drag_N_Drop {
-
-//1. Go to https://demos.telerik.com/kendo-ui/dragdrop/index
-//2. Drag and drop the small circle to bigger circle.
-//3. Assert:
-//-Text in big circle changed to: “You did great!”
+public class T1_DragDrop_OtherWay {
 
     @Test
-    public void drag_Drop_Test () throws InterruptedException {
+    public void drag_Drop_Test() throws InterruptedException {
 
         Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
 
-        //onetrust-accept-btn-handler
         WebElement acceptCookie = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
         acceptCookie.click();
 
@@ -29,17 +23,19 @@ public class T1_Circle_Drag_N_Drop {
         Thread.sleep(2000);
 
         Actions actions = new Actions(Driver.getDriver());
-        actions.dragAndDrop(smallCircle,bigCircle).perform();
+        actions.clickAndHold(smallCircle)
+                .moveToElement(bigCircle)
+                .release()
+                .perform();
+
+        Thread.sleep(2000);
 
         String actualBigCircleText = bigCircle.getText();
         String expectedBigCircleText = "You did great!";
 
-        Assert.assertEquals(actualBigCircleText,expectedBigCircleText);
+        Thread.sleep(2000);
 
-
-
-
+        Assert.assertEquals(actualBigCircleText, expectedBigCircleText);
 
     }
-
 }

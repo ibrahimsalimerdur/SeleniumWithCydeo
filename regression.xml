@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="regression suite">
+    <test name="Selenium test">
+        <classes>
+            <class name = "com.cydeo.tests.RevisitOver.TestNG_Revisit" ></class>
+        </classes>
+    </test>
+    <test name ="TestNG intro">
+        <classes>
+            <class name = "com.cydeo.tests.day4_checkBox_radioButton.T1_cssSelector_practice"  ></class>
+        </classes>
+    </test>
+
+    <test name = "test package">
+        <packages>
+            <package name="com.cydeo.tests"></package>
+        </packages>
+    </test>
+</suite>
+
+
