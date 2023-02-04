@@ -18,10 +18,10 @@ public abstract class TestBase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.close();
-    }
+ //  @AfterMethod
+  //  public void tearDown() {
+  //      driver.close();
+  //  }
 
 
 
